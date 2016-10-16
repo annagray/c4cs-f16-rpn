@@ -3,9 +3,9 @@ python:
   - "3.5"
 
 install:
-  - brew install python-coveralls
-  - brew install coverage
-  - brew install nose
+  - pip install python-coveralls
+  - pip install coverage
+  - pip install nose
 
 # command to run tests
 script: 
