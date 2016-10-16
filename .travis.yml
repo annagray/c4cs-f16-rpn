@@ -2,5 +2,16 @@ language: python
 python:
   - "3.5"
 
+install:
+  - brew install python-coveralls
+  - brew install coverage
+  - brew install nose
+
 # command to run tests
-script: make test
+script: 
+  - make test
+  - nosetests --with-coverage
+
+after_success:
+  - coveralls
+coveralls.io
